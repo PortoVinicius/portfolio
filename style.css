@@ -59,13 +59,13 @@ body {
 }
 
 /* =========================
-   FOTO DO PERFIL
+   FOTO DO PERFIL REDONDA
 ========================= */
 .profile-photo {
-    width: 440px; /* tamanho real da imagem */
-    max-width: 100%; /* responsivo */
-    height: auto;
-    border-radius: 8px;
+    width: 300px;       /* você pode aumentar ou diminuir */
+    height: 300px;      /* deixar quadrado para ficar redondo */
+    border-radius: 50%; /* deixa a imagem redonda */
+    object-fit: cover;  /* corta a imagem se não for quadrada */
     display: block;
     margin: 0 auto 10px auto;
 }
@@ -147,7 +147,7 @@ button:hover {
 
 .friend img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 /* =========================
@@ -161,6 +161,7 @@ button:hover {
         width: 100%;
     }
     .profile-photo {
-        width: 80%; /* reduz no mobile */
+        width: 60%;   /* reduz no celular */
+        height: auto;
     }
 }
