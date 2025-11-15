@@ -25,7 +25,7 @@ body {
    CONTAINER 3 COLUNAS
 ========================= */
 .container {
-    width: 95%;
+    width: 90%;
     max-width: 1200px;
     margin: 20px auto;
     display: flex;
@@ -36,7 +36,7 @@ body {
    COLUNAS
 ========================= */
 .left-column {
-    width: 40%; /* maior para a foto */
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center; /* centraliza a foto */
@@ -60,17 +60,17 @@ body {
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
     margin-bottom: 20px;
     text-align: center;
-    width: 100%; /* ocupa toda a coluna */
+    width: 100%;
 }
 
 /* =========================
-   FOTO DO PERFIL REDONDA
+   FOTO DO PERFIL REDONDA - TAMANHO NORMAL
 ========================= */
 .profile-photo {
-    width: 200px;       /* tamanho da imagem */
-    height: 200px;      /* quadrado para o círculo perfeito */
-    border-radius: 50%; /* torna circular */
-    object-fit: cover;  /* corta a imagem se necessário */
+    width: 220px;       /* tamanho equilibrado */
+    height: 220px;      /* quadrado para o círculo */
+    border-radius: 50%; 
+    object-fit: cover;  /* mantém proporção e corte se necessário */
     display: block;
     margin-bottom: 15px;
 }
@@ -161,7 +161,7 @@ button:hover {
 /* =========================
    RESPONSIVO
 ========================= */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
     .container {
         flex-direction: column;
         align-items: center;
@@ -170,7 +170,7 @@ button:hover {
         width: 100%;
     }
     .profile-photo {
-        width: 70%;   /* ajusta para telas menores */
+        width: 50%;   /* ajusta no celular */
         height: auto;
     }
 }
