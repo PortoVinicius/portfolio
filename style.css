@@ -26,7 +26,7 @@ body {
 ========================= */
 .container {
     display: flex;
-    flex-wrap: wrap; /* permite ajuste em telas menores */
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 20px auto;
     gap: 20px;
@@ -36,20 +36,20 @@ body {
    COLUNAS
 ========================= */
 .left-column {
-    width: 25%;        /* coluna menor */
+    width: 25%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* centraliza foto e caixas */
+    align-items: center;
     flex-shrink: 0;
 }
 
 .main-content {
-    width: 50%;        /* feed maior */
+    width: 50%;
     flex-shrink: 0;
 }
 
 .right-column {
-    width: 25%;        /* amigos */
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,9 +57,13 @@ body {
 }
 
 /* =========================
-   CAIXAS
+   CAIXAS GERAIS
 ========================= */
-.profile-box, .info-box, .comments-box, .friends-box {
+.profile-box, 
+.info-box, 
+.comments-box, 
+.friends-box,
+.game-box {      /* jogo da velha integrado */
     background: white;
     padding: 15px;
     border-radius: 8px;
@@ -70,13 +74,13 @@ body {
 }
 
 /* =========================
-   FOTO DO PERFIL REDONDA
+   FOTO DO PERFIL
 ========================= */
 .profile-photo {
-    width: 200px;       /* tamanho proporcional */
+    width: 200px;
     height: 200px;
-    border-radius: 50%; 
-    object-fit: cover;   /* mantém proporção */
+    border-radius: 50%;
+    object-fit: cover;
     display: block;
     margin-bottom: 15px;
 }
@@ -90,7 +94,7 @@ body {
 }
 
 /* =========================
-   INFORMAÇÕES
+   INFO BOX
 ========================= */
 .info-box p {
     margin: 5px 0;
@@ -165,6 +169,56 @@ button:hover {
 }
 
 /* =========================
+   🎮 JOGO DA VELHA
+========================= */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 5px;
+    justify-content: center;
+    margin: 15px auto;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+}
+
+.cell:hover {
+    background: #e0e0e0;
+}
+
+.reset-btn {
+    padding: 10px 20px;
+    background: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.reset-btn:hover {
+    background: #c9302c;
+}
+
+#gameStatus {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* =========================
    RESPONSIVO
 ========================= */
 @media screen and (max-width: 900px) {
@@ -172,11 +226,24 @@ button:hover {
         flex-direction: column;
         align-items: center;
     }
-    .left-column, .main-content, .right-column {
+    .left-column,
+    .main-content,
+    .right-column {
         width: 100%;
     }
     .profile-photo {
-        width: 50%;   /* ajusta no celular */
+        width: 50%;
         height: auto;
+    }
+
+    /* Ajuste do jogo no celular */
+    .board {
+        grid-template-columns: repeat(3, 70px);
+    }
+
+    .cell {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
     }
 }
