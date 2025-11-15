@@ -6,6 +6,9 @@ function addComment() {
         return;
     }
 
+    // Salva o depoimento para usar na outra página
+    localStorage.setItem("ultimoDepoimento", comment);
+
     // Abre a página do GIF
     window.location.href = "depoimento.html";
 }
