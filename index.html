@@ -3,144 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio - Estilo Facebook</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #e9ebee;
-        }
-
-        /* HEADER */
-        .header {
-            width: 100%;
-            background: #1877f2;
-            color: white;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .header .logo {
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .header input {
-            width: 250px;
-            padding: 6px;
-            border: none;
-            border-radius: 4px;
-        }
-
-        /* LAYOUT */
-        .container {
-            display: flex;
-            margin-top: 20px;
-            padding: 0 20px;
-        }
-
-        /* SIDEBAR ESQUERDA */
-        .sidebar {
-            width: 20%;
-            padding: 10px;
-        }
-
-        .sidebar a {
-            display: block;
-            padding: 10px 8px;
-            margin-bottom: 6px;
-            background: white;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        /* FEED CENTRAL */
-        .feed {
-            width: 60%;
-            padding: 10px;
-        }
-
-        .post {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .post h3 {
-            margin: 0 0 10px;
-        }
-
-        /* SIDEBAR DIREITA */
-        .rightbar {
-            width: 20%;
-            padding: 10px;
-        }
-
-        .box {
-            background: white;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        /* RESPONSIVO */
-        @media (max-width: 900px) {
-            .container {
-                flex-direction: column;
-            }
-            .sidebar, .feed, .rightbar {
-                width: 100%;
-            }
-        }
-    </style>
+    <title>Meu Perfil - Rede Social</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <div class="header">
-        <div class="logo">MeuPortfolio</div>
-        <input type="text" placeholder="Buscar...">
-    </div>
+    <header class="header">
+        <h1>Minha Rede Social</h1>
+    </header>
 
-    <!-- LAYOUT -->
     <div class="container">
 
-        <!-- SIDEBAR ESQUERDA -->
-        <div class="sidebar">
-            <a href="#">Sobre Mim</a>
-            <a href="#">Projetos</a>
-            <a href="#">Contato</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-        </div>
+        <!-- LADO ESQUERDO -->
+        <aside class="left-column">
+
+            <div class="profile-box">
+                <img src="assets/profile.jpg" class="profile-photo">
+                <h2>Seu Nome Aqui</h2>
+                <p class="status">"Seu status ou frase aqui"</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Sobre mim</h3>
+                <p><strong>Idade:</strong> 18</p>
+                <p><strong>Cidade:</strong> São Paulo</p>
+                <p><strong>Interesses:</strong> Tecnologia, games e programação</p>
+            </div>
+
+        </aside>
 
         <!-- FEED CENTRAL -->
-        <div class="feed">
-            <div class="post">
-                <h3>Bem-vindo ao meu portfólio!</h3>
-                <p>Aqui você encontrará meus projetos, experiências e formas de contato.</p>
+        <main class="main-content">
+
+            <section class="comments-box">
+                <h3>Comentários (Depoimentos)</h3>
+
+                <div id="comments"></div>
+
+                <div class="comment-form">
+                    <textarea id="commentInput" placeholder="Escreva um comentário..."></textarea>
+                    <button onclick="addComment()">Enviar</button>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- LADO DIREITO -->
+        <aside class="right-column">
+
+            <div class="friends-box">
+                <h3>Amigos</h3>
+
+                <div class="friends-list">
+                    <div class="friend">
+                        <img src="assets/amigos/amigo1.jpg">
+                        <p>Amigo 1</p>
+                    </div>
+
+                    <div class="friend">
+                        <img src="assets/amigos/amigo2.jpg">
+                        <p>Amigo 2</p>
+                    </div>
+
+                    <div class="friend">
+                        <img src="assets/amigos/amigo3.jpg">
+                        <p>Amigo 3</p>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="post">
-                <h3>Meu Último Projeto</h3>
-                <p>Descrição breve do projeto. Você pode adicionar imagens, links e mais conteúdo.</p>
-            </div>
-        </div>
-
-        <!-- SIDEBAR DIREITA -->
-        <div class="rightbar">
-            <div class="box">
-                <h4>Links Rápidos</h4>
-                <p>• Currículo PDF</p>
-                <p>• Email Profissional</p>
-            </div>
-        </div>
+        </aside>
 
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
