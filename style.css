@@ -67,8 +67,8 @@ body {
    FOTO DO PERFIL REDONDA
 ========================= */
 .profile-photo {
-    width: 440px;       /* tamanho da imagem */
-    height: 440px;      /* quadrado para o círculo perfeito */
+    width: 200px;       /* tamanho da imagem */
+    height: 200px;      /* quadrado para o círculo perfeito */
     border-radius: 50%; /* torna circular */
     object-fit: cover;  /* corta a imagem se necessário */
     display: block;
