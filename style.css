@@ -36,18 +36,18 @@ body {
    COLUNAS
 ========================= */
 .left-column {
-    width: 40%;
+    width: 25%; /* coluna menor */
     display: flex;
     flex-direction: column;
     align-items: center; /* centraliza a foto */
 }
 
 .main-content {
-    width: 40%;
+    width: 50%; /* feed maior */
 }
 
 .right-column {
-    width: 20%;
+    width: 25%; /* amigos */
 }
 
 /* =========================
@@ -64,13 +64,13 @@ body {
 }
 
 /* =========================
-   FOTO DO PERFIL REDONDA - TAMANHO NORMAL
+   FOTO DO PERFIL REDONDA
 ========================= */
 .profile-photo {
-    width: 220px;       /* tamanho equilibrado */
-    height: 220px;      /* quadrado para o círculo */
+    width: 180px;       /* tamanho proporcional à coluna */
+    height: 180px;
     border-radius: 50%; 
-    object-fit: cover;  /* mantém proporção e corte se necessário */
+    object-fit: cover;  /* mantém proporção */
     display: block;
     margin-bottom: 15px;
 }
