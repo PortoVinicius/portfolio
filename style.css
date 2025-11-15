@@ -47,15 +47,13 @@ body {
 }
 
 .profile-photo {
-    width: auto;
+    width: 300px;   /* defina o tamanho que quiser */
     height: auto;
-    max-width: 100%;
     border-radius: 8px;
-    margin-bottom: 10px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
+
 
 
 .status {
