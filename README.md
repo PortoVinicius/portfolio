@@ -16,4 +16,3 @@ Completed **Harvard CS50**, strengthening my foundations in computer science, al
 - Built and debugged a Python web application using Docker
 - Configured container networking, volume mounts, and port forwarding
 - Solved permission and daemon issues on Linux, gaining practical DevOps experience
-
